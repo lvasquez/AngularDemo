@@ -2,7 +2,7 @@ var express = require('express'),
     path = require('path'),
     http = require('http');
     customer = require('./routes/customers');
-	usuarios = require('./routes/usuarios_empresas');
+	users = require('./routes/users');
 
 var app = express();
 var bodyParser = require('body-parser');
@@ -21,7 +21,7 @@ app.all('/*', function(req, res, next) {
   next();
 });
 */
-app.post('/usuarios_empresas', usuarios.getUser);
+app.post('/users', users.getUser);
 
 // Http Methods
 app.get('/customers', customer.findAll);

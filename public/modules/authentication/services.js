@@ -23,7 +23,7 @@ angular.module('Authentication')
 
             /* Use this for real authentication
              ----------------------------------------------*/
-            $http.post('http://localhost:3000/usuarios_empresas/', { username: username, password: password })
+            $http.post('http://localhost:3000/users/', { username: username, password: password })
                 .success(function (response) {
 						if(!response.success) {
 						response.message = 'Username or password is incorrect';
