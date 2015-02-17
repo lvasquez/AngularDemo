@@ -1,15 +1,15 @@
 AngularJS with ExpressJS
 =====
 
-### Features
+## Features
 
-## Front-End
+### Front-End
 
 - AngularJS
 - Bootstrap
 - KendoUI
 
-## Back-End
+### Back-End
 
 - NodeJS
 - ExpressJS
