@@ -1,7 +1,7 @@
 var express = require('express'),
     path = require('path'),
     http = require('http');
-    customer = require('./routes/customers');
+    customers = require('./routes/customers');
 	users = require('./routes/users');
 
 var app = express();
@@ -24,11 +24,11 @@ app.all('/*', function(req, res, next) {
 app.post('/users', users.getUser);
 
 // Http Methods
-app.get('/customers', customer.findAll);
-app.get('/customers/:id', customer.findById);
-app.post('/customers', customer.addCustomer);
-app.put('/customers/:id', customer.updateCustomer);
-app.delete('/customers/:id', customer.deleteCustomer);
+app.get('/customers', customers.findAll);
+app.get('/customers/:id', customers.findById);
+app.post('/customers', customers.addCustomer);
+app.put('/customers/:id', customers.updateCustomer);
+app.delete('/customers/:id', customers.deleteCustomer);
 
 app.listen(app.get('port'), function() {
 	console.log("Express server listening on port " + app.get('port'));
