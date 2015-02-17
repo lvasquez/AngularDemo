@@ -11,17 +11,13 @@
 	      </button>
 	      <a class="navbar-brand" href="{{navigationDetail.homeUrl}}">{{navigationDetail.brandName}}</a>
 	    </div>
-
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav nav-pills">
 	      	<li data-ng-repeat="menuDetail in navigationDetail.leftMenu | orderBy:'order'" ng-class="{'active' : navigationDetail.activeMenuId == menuDetail.menuId } "><a href="{{menuDetail.url}}">{{menuDetail.name}}</a></li>
 	      </ul>	
+		  <!--
 	      <ul class="nav navbar-nav">
-		    <!--
-	        <li class="active"><a href="#">Link</a></li>
-	        <li><a href="#">Link</a></li>
-			-->
 	        <li class="dropdown">
 	          <a href="#app" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
@@ -35,7 +31,6 @@
 	          </ul>
 	        </li>
 	      </ul>
-		  <!--
 	      <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">

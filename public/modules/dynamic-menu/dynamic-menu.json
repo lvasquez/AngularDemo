@@ -1,42 +1,31 @@
 {
-    "brandName": "Aimar Group",
+    "brandName": "AngularJS",
     "homeUrl": "#app/",
     "homeMenuId": "tab1",
     "activeMenuId": "tab1",
     "rightMenu": [{
         "menuId": "tab1",
-		"parentId": "0",
         "name": "Tab 1",
         "url": "#app/r1",
         "order": 1
     }, {
         "menuId": "tab2",
-		"parentId": "0",
         "name": "Tab 2",
         "url": "#app/r2",
         "order": 2
     }, {
         "menuId": "tab3",
-		"parentId": "0",
         "name": "Tab 3",
         "url": "#app/r3",
         "order": 3
-    }, {
-		"menuId": "tab1-1",
-		"parentId": "tab1",
-		"name": "Tab 1-1",
-		"url": "#app/r2",
-		"order": 1
-	}],
+    }],
     "leftMenu": [{
         "menuId": "ltab1",
-		"parentId": "0",
-        "name": "L Tab 1",
-        "url": "#app/l1",
+        "name": "Customers",
+        "url": "#app/IndexCustomers",
         "order": 1
     }, {
         "menuId": "ltab2",
-		"parentId": "0",
         "name": "L Tab 2",
         "url": "#app/l2",
         "order": 2
