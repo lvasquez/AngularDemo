@@ -10,16 +10,16 @@ Target Server Type    : MYSQL
 Target Server Version : 50619
 File Encoding         : 65001
 
-Date: 2015-02-16 22:00:45
+Date: 2015-02-16 22:09:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `customer`
+-- Table structure for `customers`
 -- ----------------------------
-DROP TABLE IF EXISTS `customer`;
-CREATE TABLE `customer` (
+DROP TABLE IF EXISTS `customers`;
+CREATE TABLE `customers` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
@@ -30,11 +30,11 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of customer
+-- Records of customers
 -- ----------------------------
-INSERT INTO `customer` VALUES ('1', 'Luis Vasquez', 'Guatemala City', '41508981', 'levb20@gmail.com', '1');
-INSERT INTO `customer` VALUES ('2', 'Flor de Maria', 'San Jose City', '39392202', 'fm@gmail.com', '1');
-INSERT INTO `customer` VALUES ('3', 'Chepe te Presta', 'Managua City', '33839', 'ch@gmail.com', '0');
+INSERT INTO `customers` VALUES ('1', 'Luis Vasquez', 'Guatemala City', '41508981', 'levb20@gmail.com', '1');
+INSERT INTO `customers` VALUES ('2', 'Flor de Maria', 'San Jose City', '39392202', 'fm@gmail.com', '1');
+INSERT INTO `customers` VALUES ('3', 'Chepe te Presta', 'Managua City', '33839', 'ch@gmail.com', '0');
 
 -- ----------------------------
 -- Table structure for `users`
