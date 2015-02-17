@@ -2,8 +2,8 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'aimargt',
-  database: 'invoice'
+  password : '12345',
+  database: 'master-db'
 });
 
 // GET
