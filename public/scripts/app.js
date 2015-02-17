@@ -3,15 +3,13 @@
 // declare modules
 angular.module('Authentication', []);
 angular.module('Home', []);
-angular.module('Users', ['kendo.directives', 'ngResource']);
 
 angular.module('BasicHttpAuthExample', [
     'Authentication',
     'Home',
-	'Users',
     'ngRoute',
     'ngCookies',
-	'dynamicMenu',
+	'dynamicMenu'
 ])
  
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
@@ -27,17 +25,12 @@ angular.module('BasicHttpAuthExample', [
             controller: 'HomeController',
             templateUrl: 'modules/home/views/home.html'
         })
-		
-		.when('/IndexUser', {
-			templateUrl: 'modules/users/views/Index.html',
-			controller : 'UsersController'
+ 
+		.when('/l1', {
+			templateUrl: 'views/l1.html',
+			controller : 'HomeController'
 		})
 		
-		.when('/CreateUser', {
-			templateUrl: 'modules/users/views/Create.html',
-			controller: 'UsersController'
-		})
-
 		.when('/l2', {
 			templateUrl: 'views/l2.html',
 			controller : 'HomeController'

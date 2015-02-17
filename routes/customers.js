@@ -2,12 +2,13 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '12345',
-  database: 'master-db'
+  password : 'aimargt',
+  database: 'invoice'
 });
+
 // GET
 exports.findAll = function(req, res) {	
-	connection.query('select Id, name, address, phone, email, status from customer', function(err, results) {
+	connection.query('select Id, name, address, phone, email, status from customers', function(err, results) {
 	  if (err) throw err;
 	  
 	  res.send(results);
@@ -17,7 +18,7 @@ exports.findAll = function(req, res) {
 // GET/Id
 exports.findById = function(req, res) {
     var id = req.params.id;
-	var sql    = 'SELECT Id, name, address, phone, email, status FROM customer WHERE Id = ' + connection.escape(id);
+	var sql    = 'SELECT Id, name, address, phone, email, status FROM customers WHERE Id = ' + connection.escape(id);
 	connection.query(sql, function(err, results) {
 	  if (err) throw err;		  
 		res.send(results);
@@ -33,7 +34,7 @@ exports.addCustomer = function(req, res) {
 		customer.status = 0;
 		
     console.log('Adding customer: ' + JSON.stringify(customer)); 	
-	connection.query('INSERT INTO customer SET ?', customer, function(err, result) {
+	connection.query('INSERT INTO customers SET ?', customer, function(err, result) {
 	  if (err) throw err;
 
 		console.log('Success: ' + JSON.stringify(result));
@@ -53,7 +54,7 @@ exports.updateCustomer = function(req, res) {
 		customer.status = 0;
 
 	console.log('Updating customer: ' + id);
-	connection.query('UPDATE customer SET name = ?, address = ?, phone = ?, email = ?, status = ? WHERE Id = ?', [customer.name, customer.address, customer.phone, customer.email, customer.status, id],  function (err, result) {
+	connection.query('UPDATE customers SET name = ?, address = ?, phone = ?, email = ?, status = ? WHERE Id = ?', [customer.name, customer.address, customer.phone, customer.email, customer.status, id],  function (err, result) {
 		if (err) throw err;
 
 		console.log('Updated: ' + JSON.stringify(result));
@@ -65,7 +66,7 @@ exports.updateCustomer = function(req, res) {
 exports.deleteCustomer = function(req, res) {
     var id = req.params.id;
     console.log('Deleting customer: ' + id);
-	connection.query('DELETE FROM customer WHERE Id = ' + connection.escape(id), function (err, result) {
+	connection.query('DELETE FROM customers WHERE Id = ' + connection.escape(id), function (err, result) {
 		if (err) throw err;
 
 		console.log('deleted ' + result.affectedRows + ' rows');
