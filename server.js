@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer'); 
 
 app.set('port', process.env.PORT || 3000);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/app')));
 
 app.use(bodyParser.json());  // parse application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded

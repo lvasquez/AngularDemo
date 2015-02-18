@@ -26,8 +26,8 @@
         "order": 1
     }, {
         "menuId": "ltab2",
-        "name": "L Tab 2",
-        "url": "#app/l2",
+        "name": "Users Admin",
+        "url": "#app/IndexUsers",
         "order": 2
     }]
 }
