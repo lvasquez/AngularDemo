@@ -17,7 +17,7 @@ AngularJS with ExpressJS
 
 ### Screenshots
 
-![angularjs-screenshot](public/images/screenshot.png)
+![angularjs-screenshot](public/app/images/screenshot.png)
 
 ### License
 - [MIT](http://opensource.org/licenses/MIT)
